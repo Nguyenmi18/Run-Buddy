@@ -1,0 +1,71 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jiggle Into JavaScript</title>
+</head>
+<body>
+
+    <p>Press the buttons to move the box!</p>
+
+    <div id="box" style="height:150px; width:150px; background-color:orange; margin:25px"></div>
+
+    <button id="shrinkBtn">Shrink</button>
+    <button id="growBtn">Grow</button>
+    <button id="resetBtn">Reset</button>
+
+    <script type="text/javascript">
+
+    </script>
+
+</body>
+</html>
+If you view this page in the browser, you should see a page that looks like the following image:
+
+Rendered Website without JavaScript
+
+Pretty fancy!
+
+But if you try clicking the buttons, you'll realize that they have no impact on the position of the box. That's no fun whatsoever! This is where JavaScript comes in.
+
+Copy the following code, paste it over the previous code in your HTML file, and save your file again.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jiggle Into JavaScript</title>
+</head>
+<body>
+
+    <p>Press the buttons to move the box!</p>
+
+    <div id="box" style="height:150px; width:150px; background-color:orange; margin:25px"></div>
+
+    <button id="shrinkBtn">Shrink</button>
+    <button id="growBtn">Grow</button>
+    <button id="resetBtn">Reset</button>
+
+    <script type="text/javascript">
+
+        document.getElementById("shrinkBtn").addEventListener("click", function(){
+
+            document.getElementById("box").style.height = "25px";
+
+        });
+
+        document.getElementById("growBtn").addEventListener("click", function(){
+
+            document.getElementById("box").style.height = "250px";
+
+        });
+
+        document.getElementById("resetBtn").addEventListener("click", function(){
+
+            document.getElementById("box").style.height = "150px";
+
+        });
+
+    </script>
+
+</body>
+</html>
